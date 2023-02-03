@@ -6,7 +6,7 @@ function UserSearch() {
 
     const [text, setText] = useState('');
 
-    const {users, searchUsers} = useContext(GithubContext);
+    const {users, searchUsers, clearUsers} = useContext(GithubContext);
 
     const handleChange = (e) => setText(e.target.value);
 
@@ -22,6 +22,7 @@ function UserSearch() {
         }
     }
 
+    
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
         <div>
@@ -39,7 +40,7 @@ function UserSearch() {
         </div>
         {users.length > 0 && (
             <div>
-                <button className="btn btn-ghost btn-lg">
+                <button onClick={clearUsers} className="btn btn-ghost btn-lg">
                     Clear
                 </button>
             </div>
