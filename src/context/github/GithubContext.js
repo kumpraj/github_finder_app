@@ -1,5 +1,4 @@
 import { createContext, useReducer } from "react";
-import { coolGray } from "tailwindcss/colors";
 import githubReducer from "./GithubReducer";
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
